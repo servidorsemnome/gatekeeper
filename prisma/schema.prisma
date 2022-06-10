@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Grant {
+  id             Int       @id @default(autoincrement())
+  nickname       String
+  ip             String
+  authorized     Boolean   @default(false)
+  expirationDate DateTime
+  flow           Flow?
+}
+
+model Flow {
+  code           String   @id
+  nickname       String
+  ip             String
+  grant          Grant?   @relation(fields: [grantId], references: [id])
+  grantId        Int?
+  expirationDate DateTime
+}
