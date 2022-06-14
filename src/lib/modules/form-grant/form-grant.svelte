@@ -7,7 +7,7 @@
 
   const grantTypes = [
     {
-      value: '30s',
+      value: '10s',
       label: 'Permitir dessa vez',
     },
     {
@@ -19,7 +19,7 @@
       label: 'Sempre permitir esse IP',
     },
   ];
-  let value = '30s';
+  let value = '10s';
 
   const handleSubmit = async () => {
     const granted = await grantAccess(code, value);

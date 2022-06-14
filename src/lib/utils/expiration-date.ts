@@ -14,8 +14,8 @@ export const getExpirationTime = (option: string): [number, ManipulateType] => {
       return [24, 'hours'];
     case '7d':
       return [7, 'days'];
-    case '30s':
+    case '10s':
     default:
-      return [30, 'seconds'];
+      return [10, 'seconds'];
   }
 };
