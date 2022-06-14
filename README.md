@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  Access grant manager — the broker between <a href="https://github.com/servidorsemnome/kratos-iam-svc">Kratos</a>, the IAM service, and Atreus, the auth plugin.
+  Access grant manager — the broker between <a href="https://github.com/servidorsemnome/kratos-iam-svc">Kratos</a>, the IAM service, and <a href="https://github.com/servidorsemnome/atreus">Atreus</a>, the auth plugin.
 </p>
 
 ## Installing
