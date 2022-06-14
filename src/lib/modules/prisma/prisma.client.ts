@@ -17,7 +17,7 @@ export const getFlowByCode = async (code: string) => {
 
 export const createUserFlow = async (nickname: string, ip: string) => {
   const code = generateCode();
-  const expirationDate = generateExpirationDate(5, 'minutes');
+  const expirationDate = generateExpirationDate(1, 'minute');
   const flow = await prisma.flow.create({
     data: {
       code,
